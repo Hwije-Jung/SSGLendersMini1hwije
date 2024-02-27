@@ -149,7 +149,6 @@ public class ReleaseDao extends DBconnector {
         max = rs.getInt("Rel_id");
       }
 
-
       // 운송장번호, 배차번호
       sql = new StringBuilder().append("UPDATE ssglandersretail.release SET ")
               .append("way_id=? ,")
@@ -336,12 +335,12 @@ public class ReleaseDao extends DBconnector {
       cstmt.setInt(1, searchNum);
       cstmt.execute();
 
-
       cstmt.close();
       pstmt.close();
 
     } catch (SQLException e) {
-      e.printStackTrace();
+      System.out.println("==이미 승인된 건입니다==");
+      return false;
     } finally {
       closeDB();
     }

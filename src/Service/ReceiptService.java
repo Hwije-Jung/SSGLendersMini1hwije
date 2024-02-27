@@ -136,8 +136,6 @@ public class ReceiptService implements IReceiptService {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
     }
     // ----------------------------------------------------- 회원
 

@@ -108,7 +108,8 @@ public class ReleaseService implements IReleaseService {
           default -> {break;}
         }
 
-      } catch (IOException e) {
+      } catch (Exception e) {
+        printMenu(userVO);
       }
     }
     // 일반유저
@@ -138,7 +139,8 @@ public class ReleaseService implements IReleaseService {
           default -> {break;}
         }
 
-      } catch (IOException e) {
+      } catch (Exception e) {
+        printMenu(userVO);
       }
 
 
@@ -281,6 +283,4 @@ public class ReleaseService implements IReleaseService {
                        + " 상품아이디: " + release.getProductId()
                        + " 창고아이디: " + release.getWarehouseId());
   }
-
-
 }
